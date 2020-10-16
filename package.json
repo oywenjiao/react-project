@@ -9,17 +9,13 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3",
-    "webpack": "^5.1.2",
-    "webpack-cli": "^4.0.0",
-    "webpack-dev-server": "^3.11.0"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --progress --hot",
+    "dev": "webpack-dev-server --inline --progress --config config/webpack.dev.config.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,7 +37,16 @@
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^5.0.0",
     "html-webpack-plugin": "^4.5.0",
-    "uglifyjs-webpack-plugin": "^2.2.0"
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.4",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.1.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
   }
 }
