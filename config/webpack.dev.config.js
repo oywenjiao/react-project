@@ -21,7 +21,7 @@ module.exports = merge(baseConfig, {
             // 模板文件位置
             template: config.dev.index,
             // 所有静态资源注入的位置, 插入到head元素中
-            inject: 'head',
+            inject: 'body',
             // 是否为所有注入的静态资源添加webpack每次编译产生的唯一hash值
             hash: false,
             minify: {
@@ -49,6 +49,21 @@ module.exports = merge(baseConfig, {
                         loader: "postcss-loader"
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use:[
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 5000,
+                            name: path.posix.join(config.dev.assetsSubDirectory, 'img/[name][sha512:hash:base64:7].[ext]'),
+                            publicPath:config.dev.assetsPublicPath,
+                            esModule:false
+                        }
+                    },
+                ]
+
             }
         ]
     },
