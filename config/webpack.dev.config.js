@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {merge} = require('webpack-merge')
 const baseConfig = require('./webpack.config')
 const config = require('./common')
+const utils = require('./utils')
 
 module.exports = merge(baseConfig, {
     // 设置模式为 development
@@ -13,7 +14,7 @@ module.exports = merge(baseConfig, {
     output: {
         path: config.dev.assetsRoot,
         // 定义文件名，使用[name]确保每个文件名都不重复
-        filename: path.posix.join(config.dev.assetsSubDirectory, 'js/[name].js'),
+        filename: utils.assetsPath('js/[name].js'),
         publicPath: config.dev.assetsPublicPath
     },
     plugins: [
@@ -57,7 +58,7 @@ module.exports = merge(baseConfig, {
                         loader: 'url-loader',
                         options: {
                             limit: 5000,
-                            name: path.posix.join(config.dev.assetsSubDirectory, 'img/[name][sha512:hash:base64:7].[ext]'),
+                            name: utils.assetsPath('img/[name][sha512:hash:base64:7].[ext]'),
                             publicPath:config.dev.assetsPublicPath,
                             esModule:false
                         }

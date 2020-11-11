@@ -1,11 +1,11 @@
 {
   "name": "my-first",
   "version": "0.1.0",
-  "private": true,
   "main": "index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "babel-runtime": "^6.26.0",
+    "dota2": "^7.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3"
@@ -43,13 +43,14 @@
     "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^4.0.4",
+    "react-hot-loader": "^4.13.0",
     "sass-loader": "^10.0.3",
     "style-loader": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
     "webpack": "^5.1.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.2.0",
-    "url-loader": "^4.1.0"
+    "webpack-merge": "^5.2.0"
   }
 }

@@ -10,5 +10,10 @@ module.exports = {
         port: 5050,
         autoOpenBrowser: true,
         proxyTable: {}
+    },
+    build: {
+        index: path.resolve(__dirname, '../public/index.html'),
+        assetsRoot: path.resolve(__dirname, '../dist'),
+        assetsSubDirectory: 'static',
     }
 }
